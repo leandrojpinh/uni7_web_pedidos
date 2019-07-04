@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### `yard libs`
+
+yarn add @material-ui/core
+yarn add @material-ui/icons
+
+
+### `JSON SERVER`
+json-server --watch db.json --port 3001

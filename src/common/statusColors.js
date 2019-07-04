@@ -1,0 +1,4 @@
+export const NOVO = 'NOVO'
+export const EM_PREPARACAO = 'EM PREPARAÇÃO'
+export const PRONTO_PARA_PAGAMENTO = 'PRONTO PARA PAGAMENTO'
+export const CONCLUIDO = 'CONCLUÍDO'

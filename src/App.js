@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavigatiomBottomBar from './common/NavigatiomBottomBar'
+import TopBar from './common/TopBar';
+import { Switch, Route } from 'react-router-dom';
+import Acompanhamento from './components/Acompanhamento/Acompanhamento';
+import Dashboard from './components/Dashboard/Dashboard';
+import Pedido from './components/Pedido/Pedido';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <TopBar tittle='Acompanhar' />
+        <Switch>
+          <Route exact path='/' component={Acompanhamento} />
+          <Route exact path='/pedido' component={Dashboard} />
+          <Route path='/pedido/novo' component={Pedido} />
+        </Switch>
+        <NavigatiomBottomBar />
+      </div>
+    )
+  }
 }
 
 export default App;
