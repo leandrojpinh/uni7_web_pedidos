@@ -1,6 +1,7 @@
 import * as types from './actionTypes'
 import axios from 'axios'
 import { reset as resetForm } from 'redux-form'
+import { toastr } from 'react-redux-toastr'
 
 import { updateDashboard } from './dashboardActions'
 
@@ -14,7 +15,11 @@ export function create(pedido) {
         axios.post(URL, pedido)
             .then(response => {
                 dispatch(resetForm('pedidoForm'))
+                dispatch(loadAll())
                 dispatch({ type: types.CREATE_PEDIDO_SUCCESS })
+                toastr.success('Sucesso!', `Pedido criado para ${pedido.cliente}`)
+            }).catch(e => {
+                toastr.error(`Erro: ${e}`)
             })
     }
 }
@@ -26,6 +31,9 @@ export function updateStatus(pedido) {
         axios.put(`${URL}/${pedido.id}`, pedido)
             .then(response => {
                 dispatch(loadAll())
+                toastr.success('Sucesso!', `Pedido de ${pedido.cliente} ${pedido.status}`)
+            }).catch(e => {
+                toastr.error(`Erro: ${e}`)
             })
     }
 }
@@ -37,6 +45,9 @@ export function remove(pedido) {
         axios.put(`${URL}/${pedido.id}`, pedido)
             .then(response => {
                 dispatch(loadAll())
+                toastr.success('Sucesso!', `Pedido de ${pedido.cliente} ${pedido.status}`)
+            }).catch(e => {
+                toastr.error(`Erro: ${e}`)
             })
     }
 }
@@ -47,6 +58,8 @@ export function loadAll() {
             .then(pedidos => {
                 dispatch(updateDashboard(pedidos.data))
                 dispatch(loadPedidosSuccess(pedidos.data))
+            }).catch(e => {
+                toastr.error(`Erro: ${e}`)
             })
     }
 }

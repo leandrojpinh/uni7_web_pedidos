@@ -12,11 +12,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    return (
-      <div style={{ margin: 10, marginTop: 20, marginBottom: 65 }}>
-        <DashboardList dashboard={this.props.dashboard} />
-      </div>
-    )
+    return ( <DashboardList dashboard={this.props.dashboard} /> )
   }
 }
 

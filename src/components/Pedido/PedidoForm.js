@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '../../common/TextField';
+import TextField from '../../common/components/TextField';
 import Button from '@material-ui/core/Button';
 import { reduxForm, Field } from 'redux-form'
 
@@ -26,7 +26,7 @@ const PedidoForm = (props) => {
             <Field component={TextField} name='cpf' label='CPF' />
             <Field component={TextField} name='descricao' label='Descrição do pedido' multiline rows={5} />
 
-            <Button type="submit" variant="contained" color="primary" className={classes.button}>
+            <Button fullWidth={true} type="submit" variant="contained" color="primary" className={classes.button}>
                 Registrar
             </Button>
         </form>

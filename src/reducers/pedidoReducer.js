@@ -16,6 +16,9 @@ export default function pedidoReducer(state = INITIAL_STATE, action) {
         case types.LOAD_ALL_PEDIDOS_SUCCESS:
             return { ...state, list: action.pedidos }
 
+        case types.LOAD_APP_SUCCESS:
+            return { ...state, redirect: false }
+
         default:
             return state
     }

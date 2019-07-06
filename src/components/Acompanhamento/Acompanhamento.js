@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import AcompanhamentoList from './AcompanhamentoList'
 import { bindActionCreators } from 'redux'
+
+import AcompanhamentoList from './AcompanhamentoList'
 import { loadAll } from '../../actions/pedidoActions'
 
 class Acompanhamento extends Component {
@@ -9,13 +10,7 @@ class Acompanhamento extends Component {
         this.props.loadAll()
     }
 
-    render() {
-        return (
-            <div style={{ margin: 10, marginTop: 20, marginBottom: 65 }}>
-                <AcompanhamentoList pedidos={this.props.pedidos} />
-            </div>
-        )
-    }
+    render() { return ( <AcompanhamentoList pedidos={this.props.pedidos} /> ) }
 }
 
 const mapStateToProps = state => ({ pedidos: state.pedidos.list });

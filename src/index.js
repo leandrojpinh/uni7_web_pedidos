@@ -5,11 +5,9 @@ import { Provider } from 'react-redux'
 
 import './index.css';
 import App from './App';
-// import * as serviceWorker from './serviceWorker';
 
 import configureStore from './configureStore'
 const store = configureStore()
-//store.dispatch()
 
 ReactDOM.render(
     <Provider store={store}>
@@ -19,4 +17,3 @@ ReactDOM.render(
     </Provider>
 
     , document.getElementById('root'));
-// serviceWorker.unregister();
