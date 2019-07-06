@@ -1,32 +1,18 @@
 {
   "pedidos": [
     {
-      "id": 20190703153901,
-      "cliente": "Leandro Jackson",
-      "cpf": "0000000000",
-      "descricao": "Contos da Terra Média: o primeiro livro conta a história da formação da Sociedade do Anel e de Frodo.",
-      "status": "EXCLUÍDO"
-    },
-    {
       "cliente": "Leandro",
       "cpf": "12345678989",
       "descricao": "asdasdasdasdasd",
       "id": 1562422235947,
-      "status": "EXCLUÍDO"
-    },
-    {
-      "cliente": "Mildred Acioli",
-      "cpf": "065.314.923-92",
-      "descricao": "ttt",
-      "id": 1562422450671,
-      "status": "EXCLUÍDO"
+      "status": "NOVO"
     }
   ],
   "dashboard": [
     {
       "id": 1,
       "status": "NOVO",
-      "count": 0
+      "count": 1
     },
     {
       "id": 2,
@@ -46,7 +32,7 @@
     {
       "id": 5,
       "status": "EXCLUÍDO",
-      "count": 3
+      "count": 0
     }
   ]
 }
